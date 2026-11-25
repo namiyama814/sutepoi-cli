@@ -1,0 +1,43 @@
+{
+  "name": "sutepoi-cli",
+  "version": "0.1.0",
+  "description": "捨てメアドぽいぽいのHTTPSクライアントCLI",
+  "type": "module",
+  "bin": {
+    "sutepoi": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && tsx --test test/*.test.ts",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "acorn": "^8.19.0",
+    "acorn-walk": "^8.3.5",
+    "cheerio": "^1.2.0",
+    "commander": "^14.0.0",
+    "env-paths": "^3.0.0",
+    "html-to-text": "^10.0.1",
+    "playwright": "^1.56.0",
+    "proper-lockfile": "^4.1.2",
+    "tough-cookie": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/html-to-text": "^9.0.4",
+    "@types/node": "^22.0.0",
+    "@types/proper-lockfile": "^4.1.4",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "license": "MIT"
+}
